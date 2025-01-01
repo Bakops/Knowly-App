@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import ContactFormSubmission
 
-# Register your models here.
+@admin.register(ContactFormSubmission)
+class ContactFormSubmissionAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'phone', 'status', 'message')
