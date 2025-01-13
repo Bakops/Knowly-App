@@ -23,7 +23,7 @@ def contact_form_submission(request):
                 message=message
             )
 
-            return JsonResponse({'message': 'Form submitted successfully!'}, status=200)
+            return JsonResponse({'message': 'Fomulaire soumis avec succées!'}, status=200)
         except json.JSONDecodeError:
             return JsonResponse({'error': 'Invalid JSON'}, status=400)
     return JsonResponse({'error': 'Invalid request method'}, status=405)
