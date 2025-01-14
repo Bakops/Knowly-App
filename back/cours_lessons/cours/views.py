@@ -1,10 +1,10 @@
 from django.core.paginator import Paginator
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from .models import Course, Lesson
+from .models import Course
 
 @csrf_exempt
-def get_courses_and_lessons(request):
+def get_courses(request):
     if request.method == 'GET':
         page_number = request.GET.get('page', 1)
         page_size = request.GET.get('page_size', 10)
