@@ -21,6 +21,7 @@ from contact.views import contact_form_submission  # Correct import
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('api.urls')),
     path('api/contact/', contact_form_submission, name='contact_form_submission')
     
 ]
